@@ -1,6 +1,42 @@
 
-import '../estilos/FormularioAggProdcto.css'
+import { useState } from 'react'
+import '../estilos/FormularioAggProducto.css'
 const FormularioAgregarProducto = ()=>{
+  const [img,setImg] = useState('')
+  const [nombrePlato,setNombrePlato] = useState('')
+  const [precio,setPrecio]= useState('')
+  const [descripcion,setDescripcion]=useState('')
+  const [categoria,setCategoria] = useState('')
+
+  const agregarPlatillo = async()=>{
+    if(img.trim() === '' || nombrePlato.trim() === '' || precio.trim() === '' || descripcion.trim() === '' || categoria.trim() === ''){
+        alert('Todos los campos son obligatorios') //HAY QUE CAMBIAR ESTO POR UN MODAL
+        return
+    }else{
+        const platillo = {
+            imagen: img,
+            nombre: nombrePlato,
+            precio: precio,
+            descripcion: descripcion,
+            categoria: categoria
+        }
+        await postData(platillo,"productos")
+    }
+}
+
+
+
+  // Maneja la carga y vista previa de la imagen seleccionada.
+const subirImg = () => {
+const file = document.getElementById("upload-file").files[0];
+const reader = new FileReader();
+if (file) {
+    reader.onload = function(e) {
+        setImg(e.target.result);
+    };
+    reader.readAsDataURL(file);
+}
+};
 
     return (
         <div className="form-container">
