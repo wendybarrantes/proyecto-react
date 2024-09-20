@@ -60,6 +60,7 @@ if (file) {
                 id="name"
                 name="name"
                 required
+                onChange={(e)=> setNombrePlato(e.target.value)}
               />
             </div>
             <div className="form-group">
@@ -71,6 +72,7 @@ if (file) {
                 step="0.01"
                 min="0"
                 required
+                onChange={(e)=> setPrecio(e.target.value)}
               />
             </div>
             <div className="form-group">
@@ -79,6 +81,7 @@ if (file) {
                 id="description"
                 name="description"
                 required
+                onChange={(e)=> setDescripcion(e.target.value)}
               ></textarea>
             </div>
             <div className="form-group">
@@ -87,6 +90,7 @@ if (file) {
                 id="category"
                 name="category"
                 required
+                onChange={(e)=> setCategoria(e.target.value)}
               >
                 <option value="">Selecciona una categoría</option>
                 <option value="entrada">Entrada</option>
