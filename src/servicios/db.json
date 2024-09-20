@@ -1,5 +1,10 @@
 {
-    "usuarios":[
-        
-    ]
+  "usuarios": [
+    {
+      "id": "48c4",
+      "nombre": "wendy ",
+      "correo": "wenbarrantes06@gmail.com",
+      "clave": "1234"
+    }
+  ]
 }

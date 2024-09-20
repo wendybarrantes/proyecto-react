@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import '../estilos/FormularioInicio.css';
 import { getData, postData } from '../servicios/fetch';
@@ -5,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const FormularioInicio = ()=>{
-    
+    const navigate = useNavigate()
     const [activeTab, setActiveTab] = useState("login");
     const [isLoading, setIsLoading] = useState(false);
 
@@ -36,7 +37,13 @@ const FormularioInicio = ()=>{
         const usuarioValido = data.find(usuario=>usuario.correo === credencialesUsuario.correo 
           && usuario.clave === credencialesUsuario.clave)
 
+        if(credencialesUsuario.correo === "admin@gmail.com" && credencialesUsuario.clave === "admin"){
+          navigate("/menu")
+          localStorage.setItem("admin",true)
+        }
+
         if(usuarioValido){
+            navigate("/inicio")
         }
         else{
             console.log("Usuario inválido")
