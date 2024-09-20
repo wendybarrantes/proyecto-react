@@ -11,6 +11,8 @@ const RutasC  = ()=>{
                 <Route path="/inicio" element={<Inicio/>}/>
 
                 <Route path="/header" element={<Header/>}/>
+
+
             </Routes>
         </Router>
     )
