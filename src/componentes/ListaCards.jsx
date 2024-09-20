@@ -3,16 +3,15 @@ import CardPlatillo from "./CardPlatillo"
 const ListaCards = ({platillos}) => {
     return(
         <div>
-        {platillos.map(platillo=>{
+        {platillos.map((platillo)=> {
             return(
                 <CardPlatillo
                 key={platillo.id}
-                img={platillo.img}
+                img={platillo.imagen}
                 nombre={platillo.nombre}
                 precio={platillo.precio}
                 descripcion={platillo.descripcion}
                 categoria={platillo.categoria}
-
                 />
             )
         })}
