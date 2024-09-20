@@ -1,8 +1,10 @@
 import {Route, BrowserRouter as  Router, Routes } from "react-router-dom"
 import Login_Registro from "../paginas/Login_Registro"
 import Inicio from "../paginas/Inicio"
-import FormularioAgregarProducto from "../componentes/FormularioAgregarProducto"
+import Header from "../componentes/Header"
+import AgregarProducto from "../paginas/AgregarProducto"
 import Menu from "../paginas/Menu"
+import MenuPrivado from "../componentes/MenuPrivado"
 const RutasC  = ()=>{
     return(
         <Router>
@@ -11,12 +13,11 @@ const RutasC  = ()=>{
                 
                 <Route path="/inicio" element={<Inicio/>}/>
 
-                <Route path="/aggProducto" element={<FormularioAgregarProducto/>}/>
+                <Route path="/header" element={<Header/>}/>
 
-                
-                <Route path="/menu" element={<Menu/>}/>
+                <Route path="/agregar" element={<AgregarProducto/>}/>
 
-
+                <Route path="/menu" element={<MenuPrivado> <Menu/>  </MenuPrivado>}/>
             </Routes>
         </Router>
     )
