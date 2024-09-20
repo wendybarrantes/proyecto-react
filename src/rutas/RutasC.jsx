@@ -11,6 +11,7 @@ const RutasC  = ()=>{
 
 
 
+
             </Routes>
         </Router>
     )

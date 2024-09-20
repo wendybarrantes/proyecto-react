@@ -1,8 +1,8 @@
+import FormularioAgregarProducto from "../componentes/FormularioAgregarProducto"
+
 const AgregarProducto = () =>{
-    return (
-        <>
-            
-        </>
+    return(
+        <FormularioAgregarProducto/>
     )
 }
 export default AgregarProducto
