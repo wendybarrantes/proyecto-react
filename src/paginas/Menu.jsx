@@ -19,11 +19,10 @@ useEffect (() => {
         <div>
             <h1>MENU</h1>
             <ListaCards platillos= {platillos}/>
-        
-
-
-         <button  className="btn btn-primary" onClick={()=>{navigate("/agregar")}}>Agregar un nuevo producto</button>
+            <button className="btn btn-primary" onClick={()=>{navigate("/agregar")}}>Agregar un nuevo producto</button>
         </div>
-    );
+    )
 }
+
+
 export default Menu
