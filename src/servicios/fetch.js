@@ -33,7 +33,7 @@ export {getData}
 
 const deleteData = async(endpoint,id)=>{
    try {
-     const peticion = await fetch(API_URL + endpoint,{
+     const peticion = await fetch(API_URL + endpoint+"/"+id,{
          method: 'DELETE',
          headers: {
              'Content-Type': 'application/json'
