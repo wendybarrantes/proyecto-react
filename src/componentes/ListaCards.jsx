@@ -12,6 +12,7 @@ const ListaCards = ({platillos}) => {
                 precio={platillo.precio}
                 descripcion={platillo.descripcion}
                 categoria={platillo.categoria}
+                eliminarPlatillo={()=>{}}
                 />
             )
         })}
