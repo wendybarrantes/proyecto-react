@@ -1,6 +1,6 @@
 //creo la funcion para que devuelva verdadero en caso de que el administrador lo sea.
 const esAdmin = () => {
-const LocalAdmin = localStorage.getItem("admin");
+const LocalAdmin = sessionStorage.getItem("admin");
 return LocalAdmin
 }
 /*creo mi componente, pongo children para indicarle que va a tener mi pagina menú adentro
