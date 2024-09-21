@@ -21,7 +21,7 @@ useEffect (() => {
             <ListaCards platillos= {platillos}/>
             <button className="btn btn-primary" onClick={()=>{navigate("/agregar")}}>Agregar un nuevo producto</button>
         </div>
-    )
+    );
 }
 
 
