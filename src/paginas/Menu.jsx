@@ -17,7 +17,7 @@ const Menu = () => {
     return (
         <div>
             <h1>Menu</h1>
-            <ListaCards platillos={platillos} mostrarEliminar={true}/>
+            <ListaCards platillos={platillos}/>
 
             <button className="btn btn-primary" onClick={()=>{navigate("/agregar")}}>Agregar un nuevo producto</button>
         </div>
