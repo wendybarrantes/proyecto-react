@@ -1,5 +1,5 @@
 import '../estilos/CardPlatillo.css'
-const CardPlatillo = ({img,nombre,precio,descripcion,categoria}) => {
+const CardPlatillo = ({img,nombre,precio,descripcion,categoria,eliminarPlatillo,mostrarEliminar}) => {
     return (
         <div className="product-card">
             <div className="product-image">
@@ -10,7 +10,9 @@ const CardPlatillo = ({img,nombre,precio,descripcion,categoria}) => {
                 <p className="product-price">${precio}</p>
                 <p className="product-description">{descripcion}</p>
                 <span className="product-category">{categoria}</span>
-               
+                {mostrarEliminar &&
+                <button className='btn btn-danger' onClick={eliminarPlatillo}>Eliminar</button>
+                }
                 </div>
         </div>
     );
